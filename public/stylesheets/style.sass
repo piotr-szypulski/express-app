@@ -1,0 +1,100 @@
+
+$color-light: #e6e8ed;
+$color-dark: #3f4554;
+$color-red: #ff1635;
+
+body,
+html
+  height: 100%
+  margin: 0
+  padding: 0
+  width: 100%
+
+body
+  align-items: center
+  display: flex
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif
+  justify-content: center
+
+.login
+  &__container
+    align-items: center
+    background-color: $color-dark
+    border-radius: 5px
+    display: flex
+    flex-direction: column
+    height: 30vh
+    padding: 10px
+    width: 30vw
+
+    input
+      border-radius: 5px
+      height: 20%
+      margin: 5px
+      width: 60%
+
+    label
+      color: $color-light
+
+  &__button
+    border-radius: 5px
+    font-size: 14px
+    height: 20%
+    margin: 10px
+    width: 60%
+
+  &__error
+    color: $color-red
+
+.users
+  &__container
+    height: 80vh
+    width: 80vw
+
+  &__end
+    background-color: $color-dark
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
+    height: 36px
+
+
+  &__legend
+    background-color: $color-dark
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    color: $color-light
+
+  &__panel
+    color: $color-dark
+    margin-bottom: 30px
+
+    button
+      background-color: transparent
+      border: 1px solid $color-dark
+      border-radius: 5px
+      cursor: pointer
+      font-weight: bold
+      height: 26px
+      margin-left: 10px
+
+  &__single
+    border-bottom: 1px solid $color-dark
+    display: flex
+    width: 80vw
+
+    button
+      background-color: transparent
+      border: 0
+      color: $color-dark
+      cursor: pointer
+      font-size: 18px
+
+    div
+      flex: 1 1 0
+      margin: 10px
+
+
+  &__title
+    color: $color-dark
+    font-size: 16px
+    margin-bottom: 20px

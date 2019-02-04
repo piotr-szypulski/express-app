@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  div(class='users__container')
+    div(class='users__panel') Welcome, #{name}.
+      button LOGOUT
+    div(class='users__title') LIST OF USERS
+    div(class='users__single users__legend')
+      div first name
+      div last name
+      div login
+      div password
+    each user, i in users
+      div(class='users__single' name=user.login)
+        div #{user.firstName}
+        div #{user.lastName}
+        div #{user.login}
+        div #{user.pass}
+        button
+          i(class='fas fa-edit')
+        button
+          i(class='fas fa-trash-alt')
+    div(class='users__single users__end')
