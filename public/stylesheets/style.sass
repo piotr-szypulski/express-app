@@ -10,11 +10,36 @@ html
   padding: 0
   width: 100%
 
+a
+  color: $color-dark
+
 body
   align-items: center
   display: flex
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif
   justify-content: center
+
+input
+  border-radius: 5px
+  height: 30px
+  margin: 5px
+  width: 60%
+
+label
+  color: $color-light
+
+.button
+  background-color: transparent
+  border-radius: 5px
+  cursor: pointer
+  font-size: 11px
+  font-weight: bold
+  padding: 5px
+  text-decoration: none
+
+.hidden
+  position: absolute
+  visibility: hidden
 
 .login
   &__container
@@ -23,18 +48,9 @@ body
     border-radius: 5px
     display: flex
     flex-direction: column
-    height: 30vh
+    // height: 30vh
     padding: 10px
     width: 30vw
-
-    input
-      border-radius: 5px
-      height: 20%
-      margin: 5px
-      width: 60%
-
-    label
-      color: $color-light
 
   &__button
     border-radius: 5px
@@ -45,6 +61,7 @@ body
 
   &__error
     color: $color-red
+    text-align: center
 
 .users
   &__container
@@ -52,10 +69,17 @@ body
     width: 80vw
 
   &__end
+    align-items: center
     background-color: $color-dark
     border-bottom-left-radius: 5px
     border-bottom-right-radius: 5px
+    display: flex
     height: 36px
+
+    a
+      border: 1px solid $color-light
+      color: $color-light
+      margin-left: 20px
 
 
   &__legend
@@ -69,12 +93,7 @@ body
     margin-bottom: 30px
 
     button
-      background-color: transparent
       border: 1px solid $color-dark
-      border-radius: 5px
-      cursor: pointer
-      font-weight: bold
-      height: 26px
       margin-left: 10px
 
   &__single

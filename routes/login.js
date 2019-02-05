@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const users = require('../public/users.json');
-const fs = require('fs');
-const path = require('path');
 
 router.get('/', (req, res, next) => {
   res.render('login');
@@ -20,6 +18,6 @@ router.post('/', (req, res, next) => {
       error: 'Wrong username/password',
     });
   }
-})
+});
 
 module.exports = router;

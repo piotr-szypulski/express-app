@@ -3,7 +3,7 @@ extends layout
 block content
   div(class='users__container')
     div(class='users__panel') Welcome, #{name}.
-      button LOGOUT
+      button(class='button') LOGOUT
     div(class='users__title') LIST OF USERS
     div(class='users__single users__legend')
       div first name
@@ -17,7 +17,10 @@ block content
         div #{user.login}
         div #{user.pass}
         button
-          i(class='fas fa-edit')
+          a(href=`/edit?init=true&edit=true&first-name=${user.firstName}&last-name=${user.lastName}&login=${user.login}&pass=${user.pass}`)
+            i(class='fas fa-edit')
         button
-          i(class='fas fa-trash-alt')
-    div(class='users__single users__end')
+          a(href=`/delete?login=${user.login}`)
+            i(class='fas fa-trash-alt')
+    div(class='users__end')
+      a(class='button' href='/edit?init=true&add=true') NEW USER

@@ -5,11 +5,36 @@ html {
   padding: 0;
   width: 100%; }
 
+a {
+  color: #3f4554; }
+
 body {
   align-items: center;
   display: flex;
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
   justify-content: center; }
+
+input {
+  border-radius: 5px;
+  height: 30px;
+  margin: 5px;
+  width: 60%; }
+
+label {
+  color: #e6e8ed; }
+
+.button {
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px;
+  text-decoration: none; }
+
+.hidden {
+  position: absolute;
+  visibility: hidden; }
 
 .login__container {
   align-items: center;
@@ -17,16 +42,8 @@ body {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  height: 30vh;
   padding: 10px;
   width: 30vw; }
-  .login__container input {
-    border-radius: 5px;
-    height: 20%;
-    margin: 5px;
-    width: 60%; }
-  .login__container label {
-    color: #e6e8ed; }
 
 .login__button {
   border-radius: 5px;
@@ -36,17 +53,24 @@ body {
   width: 60%; }
 
 .login__error {
-  color: #ff1635; }
+  color: #ff1635;
+  text-align: center; }
 
 .users__container {
   height: 80vh;
   width: 80vw; }
 
 .users__end {
+  align-items: center;
   background-color: #3f4554;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  display: flex;
   height: 36px; }
+  .users__end a {
+    border: 1px solid #e6e8ed;
+    color: #e6e8ed;
+    margin-left: 20px; }
 
 .users__legend {
   background-color: #3f4554;
@@ -58,12 +82,7 @@ body {
   color: #3f4554;
   margin-bottom: 30px; }
   .users__panel button {
-    background-color: transparent;
     border: 1px solid #3f4554;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    height: 26px;
     margin-left: 10px; }
 
 .users__single {

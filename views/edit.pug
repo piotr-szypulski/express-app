@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  form(class='login__container' method='get' name='form')
+    label(for='first-name') First name:
+    input(name='first-name' type='text' value=`${fields['first-name'] || ''}`)
+    if fields['first-name'] === ''
+      div(class="login__error") You must enter first name
+    label(for='last-name') Last name:
+    input(name='last-name' type='text' value=`${fields['last-name'] || ''}`)
+    if fields['last-name'] === ''
+      div(class="login__error") You must enter last name
+    label(for='login') Login:
+    input(name='login' type='text' value=`${fields.login || ''}`)
+    if fields.login === ''
+      div(class="login__error") You must enter login
+    label(for='pass') Password:
+    input(name='pass' type='text' value=`${fields.pass || ''}`)
+    if fields.pass === ''
+      div(class="login__error") You must enter password
+    input(type='submit' value='Save')
+    input(class='hidden' name='edit' type='text' value=`${fields.edit || 'false'}`)
+    input(class='hidden' name='add' type='text' value=`${fields.add || 'false'}`)
+    if error
+      div(class="login__error") #{error}

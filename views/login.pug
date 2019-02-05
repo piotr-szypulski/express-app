@@ -3,9 +3,9 @@ extends layout
 block content
   form(class='login__container' method='post' name='form')
     label(for='user') Username:
-    input(class='login__user' name='login' type='text')
+    input(name='login' type='text')
     label(for='pass') Password:
-    input(class='login__pass' name='pass' type='password')
+    input(name='pass' type='password')
     input(class='login__button' type='submit' value='Login')
     if error
       div(class="login__error") #{error}

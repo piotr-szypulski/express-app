@@ -1,0 +1,10 @@
+options:
+  formatter: stylish
+files:
+  include: '**/*.s+(a|c)ss'
+rules:
+  # Name Formats
+  class-name-format:
+    - 2
+    -
+      convention: hyphenatedbem
