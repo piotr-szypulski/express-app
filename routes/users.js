@@ -5,6 +5,10 @@ const fs = require('fs');
 const usersPath = `${__dirname}/../public/users.json`;
 
 router.get('/', (req, res) => {
+  if (!req.session.login) {
+    res.redirect('/login');
+  }
+
   fs.readFile(usersPath, 'utf-8', (err, data) => {
     if (err) {
       return console.error(err);
