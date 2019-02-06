@@ -66,7 +66,8 @@ label {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   display: flex;
-  height: 36px; }
+  height: 36px;
+  min-width: 600px; }
   .users__end a {
     border: 1px solid #e6e8ed;
     color: #e6e8ed;
@@ -88,6 +89,7 @@ label {
 .users__single {
   border-bottom: 1px solid #3f4554;
   display: flex;
+  min-width: 600px;
   width: 80vw; }
   .users__single button {
     background-color: transparent;

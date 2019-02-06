@@ -3,18 +3,18 @@
     "firstName": "Jackie",
     "lastName": "Chan",
     "login": "jackie",
-    "pass": "8123456"
+    "pass": "12345"
   },
   {
     "firstName": "Bruce",
     "lastName": "Lee",
     "login": "bruce",
-    "pass": "543215"
+    "pass": "54321"
   },
   {
-    "firstName": "Takeshi",
-    "lastName": "Kaneshiro",
-    "login": "takeshi",
-    "pass": "67890aa"
+    "firstName": "sdfsf",
+    "lastName": "sdff",
+    "login": "sdfdsf",
+    "pass": "sdfsfsdfdsf"
   }
 ]

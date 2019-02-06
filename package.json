@@ -17,6 +17,7 @@
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
+    "eslint": "^5.13.0",
     "nodemon": "^1.18.9"
   }
 }

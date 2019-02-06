@@ -1,11 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const users = require('../public/users.json');
+const fs = require('fs');
 
-router.get('/', (req, res, next) => {
-  res.render('users', {
-    name: req.session.login,
-    users: users,
+const usersPath = `${__dirname}/../public/users.json`;
+
+router.get('/', (req, res) => {
+  fs.readFile(usersPath, 'utf-8', (err, data) => {
+    if (err) {
+      return console.error(err);
+    }
+
+    const users = JSON.parse(data);
+
+    res.render('users', {
+      name: req.session.login,
+      users: users,
+    });
   });
 });
 
