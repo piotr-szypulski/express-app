@@ -1,26 +1,41 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
+const { promisify } = require('util');
 
 const usersPath = `${__dirname}/../public/users.json`;
+
+const loadJSON = async (jsonPath) => {
+  if (jsonPath === undefined || jsonPath === null || jsonPath.length === 0) {
+    console.error('The path to JSON file is incorrect.');
+  }
+  const readFileAsync = promisify(fs.readFile);
+
+  try {
+    const json = await readFileAsync(jsonPath, {encoding: 'utf8'});
+    return JSON.parse(json);
+  }
+  catch (err) {
+    console.error(err);
+    return null;
+  }
+};
 
 router.get('/', (req, res) => {
   if (!req.session.login) {
     res.redirect('/login');
   }
 
-  fs.readFile(usersPath, 'utf-8', (err, data) => {
-    if (err) {
-      return console.error(err);
-    }
-
-    const users = JSON.parse(data);
-
-    res.render('users', {
-      name: req.session.login,
-      users: users,
-    });
-  });
+  loadJSON(usersPath)
+    .then((users)=> {
+      res.render('users', {
+        name: req.session.login,
+        users: users,
+      });
+    })
 });
 
-module.exports = router;
+module.exports = {
+  loadJSON,
+  router,
+};

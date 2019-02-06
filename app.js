@@ -7,7 +7,7 @@ var sassMiddleware = require('node-sass-middleware');
 var session = require('express-session');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var { router: usersRouter } = require('./routes/users');
 var loginRouter = require('./routes/login');
 var editRouter = require('./routes/edit');
 var deleteRouter = require('./routes/delete');
